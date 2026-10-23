@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+    volumes:
+      - ./certs:/app/certs:ro
+      - ./secrets:/app/secrets      # not read-only: the Gmail token refreshes itself
+    ports:
+      - "127.0.0.1:8000:8000"       # localhost only, never exposed publicly
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    # no ports published: only the backend container can reach MongoDB
+
+volumes:
+  mongo-data:
