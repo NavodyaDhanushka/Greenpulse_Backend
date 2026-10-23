@@ -1,0 +1,8 @@
+TOPIC_SENSOR = "greenpulse/device/sensor"
+TOPIC_CARE = "greenpulse/ai/care"
+TOPIC_WEATHER = "greenpulse/ai/weather"
+TOPIC_NOTIFICATIONS = "greenpulse/ai/notifications"
+TOPIC_STATUS = "greenpulse/system/status"
+TOPIC_AI_INPUT = "greenpulse/ai/input"
+TOPIC_QUESTION = "greenpulse/user/question"
+TOPIC_ANSWER = "greenpulse/ai/answer"
