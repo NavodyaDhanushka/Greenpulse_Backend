@@ -1,0 +1,12 @@
+.env
+secrets/
+certs/
+*.pem
+*.key
+*.crt
+gmail_token.json
+gmail_credentials.json
+__pycache__/
+*.pyc
+.venv/
+venv/
